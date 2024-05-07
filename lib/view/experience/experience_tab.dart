@@ -519,19 +519,19 @@ class _ExperienceTabState extends State<ExperienceTab> {
                           child: Container(
                             padding: const EdgeInsets.all(10.0),
                             decoration: BoxDecoration(
-                                color: data == 2
+                                color: data == 3
                                     ? AppColors().cardColor
                                     : Colors.transparent,
                                 border: Border(
                                     left: BorderSide(
-                                        color: data == 2
+                                        color: data == 3
                                             ? AppColors().neonColor
                                             : Colors.white,
                                         width: 2))),
                             child: Text(
                               'Grupo LTM',
                               style: TextStyle(
-                                  color: data == 2
+                                  color: data == 3
                                       ? AppColors().neonColor
                                       : AppColors().textLight,
                                   letterSpacing: 1,
