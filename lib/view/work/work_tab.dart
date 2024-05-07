@@ -29,7 +29,7 @@ class _WorkWebState extends ConsumerState<WorkTab> {
                   fontFamily: 'sfmono'),
               children: <TextSpan>[
                 TextSpan(
-                  text: ' My Noteworthy Projects',
+                  text: ' Meus projetos dignos de nota',
                   style: GoogleFonts.roboto(
                       color: AppColors().textColor,
                       letterSpacing: 1,
@@ -41,43 +41,43 @@ class _WorkWebState extends ConsumerState<WorkTab> {
         Padding(
           padding: const EdgeInsets.only(top: 8.0),
           child: Text(
-            'view the archives',
+            'a maioria está em repositórios privados, então aguardem para eu poder compartilhar alguns ( ._.)',
             style: TextStyle(
                 color: AppColors().neonColor,
-                fontSize: 12,
+                fontSize: 15,
                 fontFamily: 'sfmono'),
           ),
         ),
-        Container(
-          padding: const EdgeInsets.only(top: 30.0, bottom: 50.0),
-          child: StaggeredGrid.count(
-            crossAxisCount: 2,
-            mainAxisSpacing: 4,
-            crossAxisSpacing: 4,
-            children: [
-              StaggeredGridTile.count(
-                crossAxisCellCount: 1,
-                mainAxisCellCount: 1,
-                child: tile(0),
-              ),
-              StaggeredGridTile.count(
-                crossAxisCellCount: 1,
-                mainAxisCellCount: 1,
-                child: tile(1),
-              ),
-              StaggeredGridTile.count(
-                crossAxisCellCount: 1,
-                mainAxisCellCount: 1,
-                child: tile(2),
-              ),
-              StaggeredGridTile.count(
-                crossAxisCellCount: 1,
-                mainAxisCellCount: 1,
-                child: tile(3),
-              ),
-            ],
-          ),
-        ),
+        // Container(
+        //   padding: const EdgeInsets.only(top: 30.0, bottom: 50.0),
+        //   child: StaggeredGrid.count(
+        //     crossAxisCount: 2,
+        //     mainAxisSpacing: 4,
+        //     crossAxisSpacing: 4,
+        //     children: [
+        //       StaggeredGridTile.count(
+        //         crossAxisCellCount: 1,
+        //         mainAxisCellCount: 1,
+        //         child: tile(0),
+        //       ),
+        //       StaggeredGridTile.count(
+        //         crossAxisCellCount: 1,
+        //         mainAxisCellCount: 1,
+        //         child: tile(1),
+        //       ),
+        //       StaggeredGridTile.count(
+        //         crossAxisCellCount: 1,
+        //         mainAxisCellCount: 1,
+        //         child: tile(2),
+        //       ),
+        //       StaggeredGridTile.count(
+        //         crossAxisCellCount: 1,
+        //         mainAxisCellCount: 1,
+        //         child: tile(3),
+        //       ),
+        //     ],
+        //   ),
+        // ),
       ],
     );
   }

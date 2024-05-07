@@ -109,7 +109,7 @@ class _IntroTabState extends State<IntroTab> {
                         border: Border.all(
                             color: AppColors().neonColor, width: 1.5)),
                     child: Center(
-                      child: Text('Check Out My Work!',
+                      child: Text('Confira meu Trabalho!',
                           style: TextStyle(
                               color: AppColors().neonColor,
                               fontSize: 13,

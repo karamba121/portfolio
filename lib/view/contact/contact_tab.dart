@@ -36,7 +36,7 @@ class _ContactTabState extends ConsumerState<ContactTab> {
                         fontFamily: 'sfmono'),
                   ),
                   Text(
-                    ''' What's next?''',
+                    ''' O que vem depois?''',
                     style: TextStyle(
                         color: AppColors().neonColor,
                         fontSize: 16,
@@ -47,7 +47,7 @@ class _ContactTabState extends ConsumerState<ContactTab> {
               Padding(
                 padding: const EdgeInsets.only(top: 8.0),
                 child: Text(
-                  'Get In Touch',
+                  'Entre Em Contato!',
                   style: GoogleFonts.robotoSlab(
                     color: AppColors().textColor,
                     fontWeight: FontWeight.bold,
@@ -87,7 +87,7 @@ class _ContactTabState extends ConsumerState<ContactTab> {
                         border: Border.all(
                             color: AppColors().neonColor, width: 1.5)),
                     child: Center(
-                      child: Text('Say Hello!',
+                      child: Text('Diga Olá!',
                           style: TextStyle(
                               color: AppColors().neonColor,
                               fontSize: 13,
@@ -102,21 +102,36 @@ class _ContactTabState extends ConsumerState<ContactTab> {
           ),
           Column(
             children: [
-              Text(
-                '''Built & Developed by Jeevanandham''',
-                style: TextStyle(
-                    color: AppColors().textColor,
-                    fontSize: 12,
-                    fontFamily: 'sfmono'),
+              Padding(
+                padding: const EdgeInsets.only(top: 15.0),
+                child: SizedBox(
+                  width: AppClass().getMqWidth(context) * 0.45,
+                  child: Text(
+                    'matheus.stag@gmail.com',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.roboto(
+                      color: AppColors().textLight,
+                      letterSpacing: 1,
+                      height: 1.5,
+                      fontSize: 18,
+                    ),
+                  ),
+                ),
               ),
               Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  '''ref - Britney C''',
-                  style: TextStyle(
-                      color: AppColors().neonColor,
-                      fontSize: 12,
-                      fontFamily: 'sfmono'),
+                padding: const EdgeInsets.only(top: 15.0),
+                child: SizedBox(
+                  width: AppClass().getMqWidth(context) * 0.45,
+                  child: Text(
+                    '+55 (61) 9 9586-8364',
+                    textAlign: TextAlign.center,
+                    style: GoogleFonts.roboto(
+                      color: AppColors().textLight,
+                      letterSpacing: 1,
+                      height: 1.5,
+                      fontSize: 18,
+                    ),
+                  ),
                 ),
               ),
             ],
@@ -143,7 +158,7 @@ class _ContactTabState extends ConsumerState<ContactTab> {
           fontFamily: 'sfmono'),
           title: Row(
             children: [
-              const Expanded(flex: 9, child: Text('Contact Me!')),
+              const Expanded(flex: 9, child: Text('Me manda um E-mail!')),
               IconButton(onPressed: () => Navigator.pop(context), icon: Icon(Icons.close, color: AppColors().textColor))
             ],
           ),
@@ -165,12 +180,12 @@ class _ContactTabState extends ConsumerState<ContactTab> {
                           controller: nameController,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
-                              return 'Let me know your name (or just enter anonymous)';
+                              return 'Me deixe saber seu nome (ou apenas me envie de forma anônima)';
                             }
                             return null;
                           },
                           decoration: InputDecoration(
-                            hintText: 'Name*',
+                            hintText: 'Nome*',
                             errorStyle: TextStyle(color: AppColors().neonColor),
                             errorBorder: OutlineInputBorder(borderSide: BorderSide(color: AppColors().neonColor)),
                             enabledBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
@@ -183,7 +198,7 @@ class _ContactTabState extends ConsumerState<ContactTab> {
                           child: TextField(
                             controller: contactInfoController,
                             decoration: const InputDecoration(
-                              hintText: 'Contact Info (Optional)',
+                              hintText: 'Informações de contato (Opcional)',
                               enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                               focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
                               border: OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
@@ -197,12 +212,12 @@ class _ContactTabState extends ConsumerState<ContactTab> {
                             maxLines: 8,
                             validator: (value) {
                               if (value == null || value.isEmpty) {
-                                return 'Seriously? you want to send a blank message to me :(';
+                                return 'Sério? Parece que você quer me mandar um e-mail vazio :(';
                               }
                               return null;
                             },
                             decoration: InputDecoration(
-                              hintText: 'Message*',
+                              hintText: 'Texto*',
                               errorStyle: TextStyle(color: AppColors().neonColor),
                               errorBorder: OutlineInputBorder(borderSide: BorderSide(color: AppColors().neonColor)),
                               enabledBorder: const OutlineInputBorder(borderSide: BorderSide(color: Colors.white)),
@@ -225,15 +240,15 @@ class _ContactTabState extends ConsumerState<ContactTab> {
                                       AppClass().sendEmail(nameController.text, contactInfoController.text, msgController.text).then((value) {
                                         if(value) {
                                           Navigator.pop(context);
-                                          AppClass().showSnackBar('Message sent successfully', context: context);
+                                          AppClass().showSnackBar('Mensagem enviada com sucesso!', context: context);
                                         } else {
                                           Navigator.pop(context);
-                                          AppClass().showSnackBar('Failed to send message, please try again later.', context: context);
+                                          AppClass().showSnackBar('Falha ao enviar mensagem. Tente novamente mais tarde.', context: context);
                                         }
                                         ref.read(progressProvider.notifier).state = false;
                                       }).onError((error, stackTrace) {
                                         Navigator.pop(context);
-                                        AppClass().showSnackBar('Error Occurred', context: context);
+                                        AppClass().showSnackBar('Ops, houve um erro', context: context);
                                       });
                                     }
                                   },

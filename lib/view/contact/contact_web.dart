@@ -213,7 +213,7 @@ class _ContactWebState extends ConsumerState<ContactWeb> {
                               child: TextField(
                                 controller: contactInfoController,
                                 decoration: const InputDecoration(
-                                  hintText: 'Informações de contato (Optional)',
+                                  hintText: 'Informações de contato (Opcional)',
                                   enabledBorder: OutlineInputBorder(
                                       borderSide:
                                           BorderSide(color: Colors.white)),
