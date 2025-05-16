@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio/resource/responsive.dart';
-import 'package:portfolio/view/experience/experience_mobile.dart';
-import 'package:portfolio/view/experience/experience_tab.dart';
 
 import 'experience_web.dart';
 
@@ -17,8 +15,8 @@ class _ExperienceState extends State<Experience> {
   Widget build(BuildContext context) {
     return const Responsive(
       webView: ExperienceWeb(),
-      mobileView: ExperienceMob(),
-      tabView: ExperienceTab(),
+      mobileView: ExperienceWeb(),
+      tabView: ExperienceWeb(),
     );
   }
 }

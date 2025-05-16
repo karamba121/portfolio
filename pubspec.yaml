@@ -20,6 +20,7 @@ dependencies:
   url_launcher:
   scroll_to_index:
   http:
+  hugeicons: ^0.0.11
 
 
 

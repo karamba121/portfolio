@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hugeicons/hugeicons.dart';
 
 import '../../resource/app_class.dart';
 import '../../resource/colors.dart';
@@ -109,59 +110,31 @@ class _AboutMobileState extends State<AboutMobile> {
                     Padding(
                       padding: const EdgeInsets.only(top: 20.0),
                       child: GridView.count(
-                          crossAxisCount: 2,
-                          shrinkWrap: true,
-                          childAspectRatio: 10,
-                          children: [
-                            Row(
-                              children: [
-                                const Icon(Icons.arrow_right),
-                                Text(' Flutter',
+                        crossAxisCount: 2,
+                        shrinkWrap: true,
+                        childAspectRatio: 10,
+                        children: [
+                          ...Strings.techs.map(
+                            (tech) {
+                              return Row(
+                                children: [
+                                  const Icon(
+                                      Icons.arrow_right),
+                                  Text(
+                                    tech,
                                     style: GoogleFonts.robotoFlex(
                                       color: AppColors().textLight,
                                       letterSpacing: 1,
                                       height: 1.5,
                                       fontSize: 14,
-                                    )),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                const Icon(Icons.arrow_right),
-                                Text(Strings.tech2,
-                                    style: GoogleFonts.robotoFlex(
-                                      color: AppColors().textLight,
-                                      letterSpacing: 1,
-                                      height: 1.5,
-                                      fontSize: 14,
-                                    )),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                const Icon(Icons.arrow_right),
-                                Text(Strings.tech3,
-                                    style: GoogleFonts.robotoFlex(
-                                      color: AppColors().textLight,
-                                      letterSpacing: 1,
-                                      height: 1.5,
-                                      fontSize: 14,
-                                    )),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                const Icon(Icons.arrow_right),
-                                Text(Strings.tech4,
-                                    style: GoogleFonts.robotoFlex(
-                                      color: AppColors().textLight,
-                                      letterSpacing: 1,
-                                      height: 1.5,
-                                      fontSize: 14,
-                                    )),
-                              ],
-                            ),
-                          ]),
+                                    ),
+                                  ),
+                                ],
+                              );
+                            },
+                          ),
+                        ],
+                      ),
                     ),
                   ],
                 ),
