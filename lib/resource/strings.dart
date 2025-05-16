@@ -45,12 +45,21 @@ class Strings {
         'Trabalhei em muitos projetos de diferentes plataformas, como landing pages de campanhas da CAIXA, Sistemas de troca de pontos por produtos, E-commerce, ERP, aplicações CMS e aplicativos mobile.',
       ],
     ),
+    Work(company: 'DF Imóveis',
+      designation: 'Programador Pleno',
+      duration: 'Out 2017 - Jan 2018',
+      about: [
+        'Uma empresa do ramo imobiliário, com um único produto focado em conectar pessoas a imóveis.',
+        'Foi uma experiência breve, mas que agregou muito à minha carreira. Tive a oportunidade de ser confrontado com mais responsabilidades e pude subir de nível como proffissional aqui.',
+        'Trabalhei com uma equipe de 3 desenvolvedores, focado num produto web de arquitetura muito complexa e com muitos usuários.',
+      ],
+    ),
     Work(
       company: 'Promitech',
       designation: 'Tech Lead',
       duration: 'Jan 2019 - Mai 2021',
       about: [
-        'Atuei como Líder Técnico de uma equipe de 5 desenvolvedores, entregando projetos de Licitações do Governo, Aplicativos Mobile dentro e fora do país e um produto próprio da empresa.',
+        'Comecei como programador pleno, mas logo fui convidado ao desafico de atuar como Líder Técnico de uma equipe de 5 desenvolvedores, entregando projetos de Licitações do Governo, Aplicativos Mobile dentro e fora do país e um produto próprio da empresa.',
         'Desenvolvi muitas soluções web como Landing Pages, ERP\'s, aplicativos de delivery e de controle de ponto do trabalhador.',
         'Adquiri muita experiência com tecnologias como Dart/Flutter, Firebase, MongoDB, arquitetura de microsserviços, PHP/Laravel, CI/CD, DDD e Clean Architeture',
       ],
